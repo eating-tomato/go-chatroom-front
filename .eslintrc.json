@@ -1,0 +1,150 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "import",
+    "promise"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "0.53"
+    },
+    "propWrapperFunctions": [
+        "forbidExtraProps",
+        {"property": "freeze", "object": "Object"},
+        {"property": "myFavoriteWrapper"}
+    ],
+    "linkComponents": [
+      "Hyperlink",
+      {"name": "Link", "linkAttribute": "to"}
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".d.ts"
+        ]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "worker": true,
+    "serviceworker": true,
+    "es6": true
+  },
+  "rules": {
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-extra-parens": "off",
+    "@typescript-eslint/no-extra-parens": "off",
+    "dot-notaion": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "none",
+      "ignoreRestSiblings": true
+    }],
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2],
+    "prefer-template": "off",
+    "no-confusing-arrow": "error",
+    "arrow-parens": "error",
+    "eol-last": "error",
+    "no-multiple-empty-lines": ["error", { "maxEOF": 1, "max": 1 }],
+    "semi": "error",
+    "func-call-spacing": "error",
+    "template-tag-spacing": ["error", "always"],
+    "spaced-comment": "error",
+    "semi-style": "error",
+    "space-infix-ops": "error",
+    "comma-spacing": ["error", {"before": false, "after": true}],
+    "no-trailing-spaces": "error",
+    "space-before-function-paren": ["error", "never"],
+    "no-multi-spaces": "error",
+    "object-curly-spacing": ["warn", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "arrow-body-style": "error",
+    "jsx-quotes": "error",
+    "quotes": ["error", "single"],
+    "key-spacing": ["error", { "beforeColon": false }],
+    "prefer-const": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/no-use-before-define": ["error", {
+      "functions": false,
+      "classes": false
+    }],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/prefer-includes": "off",
+    "@typescript-eslint/prefer-namespace-keyword": "off", 
+    "@typescript-eslint/type-annotation-spacing": ["warn", {
+      "before": false,
+      "after": false,
+      "overrides": {
+        "arrow": {
+          "before": true,
+          "after": true
+        }
+      }
+    }],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-for-in-array": "error",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    "import/order": "warn",
+    "import/no-default-export": "off",
+    "import/no-absolute-path": "warn",
+
+    "promise/catch-or-return": "off",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/always-return": "off",
+    "promise/no-nesting": "warn",
+    "promise/no-promise-in-callback": "warn",
+    "promise/no-callback-in-promise": "warn",
+    "promise/no-new-statics": "error",
+    "promise/no-return-in-finally": "warn",
+    "promise/valid-params": "warn",
+    "react/prop-types": "off"
+  },
+
+  "globals": {
+    "__SENTRY__": "readonly",
+    "__DEV__": "readonly",
+    "__PRODUCT_PLATFORM__": "readonly",
+    "__API_HOST__": "readonly",
+    "__CM_REPORT__": "readonly",
+    "__ALIYUN_REPORT__": "readonly",
+    "__HOSTS__": "readonly",
+    "__VCONSOLE__": "readonly"
+  }
+}
