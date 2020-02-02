@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "generateScopedName": "[folder][name]__[local]--[hash:base64:5]"
+      }
+    ]
+  ]
+}

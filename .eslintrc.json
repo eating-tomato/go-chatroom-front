@@ -135,16 +135,5 @@
     "promise/no-return-in-finally": "warn",
     "promise/valid-params": "warn",
     "react/prop-types": "off"
-  },
-
-  "globals": {
-    "__SENTRY__": "readonly",
-    "__DEV__": "readonly",
-    "__PRODUCT_PLATFORM__": "readonly",
-    "__API_HOST__": "readonly",
-    "__CM_REPORT__": "readonly",
-    "__ALIYUN_REPORT__": "readonly",
-    "__HOSTS__": "readonly",
-    "__VCONSOLE__": "readonly"
   }
 }
